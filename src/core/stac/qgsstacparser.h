@@ -16,8 +16,7 @@
 #ifndef QGSSTACPARSER_H
 #define QGSSTACPARSER_H
 
-#define SIP_NO_FILE
-
+#include "qgis.h"
 #include <nlohmann/json.hpp>
 #include <QUrl>
 
@@ -32,14 +31,13 @@ class QgsStacItemCollection;
 
 
 /**
- * \brief SpatioTemporal Asset Catalog JSON parser
+ * \brief SpatioTemporal Asset Catalog JSON parser.
  *
  * This class parses json data and creates the appropriate
- * STAC Catalog, Collection, Item or ItemCollection
+ * STAC Catalog, Collection, Item or ItemCollection.
  *
- * \note not available in Python bindings
 */
-class QgsStacParser
+class CORE_EXPORT QgsStacParser
 {
   public:
     //! Default constructor

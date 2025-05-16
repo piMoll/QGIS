@@ -16,8 +16,7 @@
 #ifndef QGSSTACCOLLECTION_H
 #define QGSSTACCOLLECTION_H
 
-#define SIP_NO_FILE
-
+#include "qgis.h"
 #include "qgis_core.h"
 #include "qgsstaccatalog.h"
 #include "qgsstacextent.h"
@@ -26,9 +25,7 @@
 
 /**
  * \ingroup core
- * \brief Class for storing a STAC Collection's data
- *
- * \note Not available in python bindings
+ * \brief Class for storing a STAC Collection's data.
  *
  * \since QGIS 3.40
  */

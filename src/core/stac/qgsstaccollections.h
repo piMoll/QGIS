@@ -16,8 +16,7 @@
 #ifndef QGSSTACCOLLECTIONS_H
 #define QGSSTACCOLLECTIONS_H
 
-#define SIP_NO_FILE
-
+#include "qgis.h"
 #include "qgis_core.h"
 #include "qgsstaclink.h"
 
@@ -28,9 +27,8 @@ class QgsStacCollection;
 
 /**
  * \ingroup core
- * \brief Class for storing a list of STAC Collections.
- * This is typically used to store the data returned by STAC API /collections endpoint
- * \note Not available in python bindings
+ * \brief Class for storing a list of STAC Collections, which is typically used to store the data returned by STAC API /collections endpoint.
+ *
  * \since QGIS 3.40
  */
 class CORE_EXPORT QgsStacCollections

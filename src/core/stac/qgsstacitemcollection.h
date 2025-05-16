@@ -16,8 +16,7 @@
 #ifndef QGSSTACITEMCOLLECTION_H
 #define QGSSTACITEMCOLLECTION_H
 
-#define SIP_NO_FILE
-
+#include "qgis.h"
 #include "qgis_core.h"
 #include "qgsstaclink.h"
 
@@ -29,9 +28,10 @@ class QgsStacItem;
 /**
  * \ingroup core
  * \brief Class for storing a STAC Item Collections.
+ *
  * An Item Collection is typically returned by STAP API endpoints and contains a subset
- * of the the STAC Items available in a STAC Catalog or Collection
- * \note Not available in python bindings
+ * of the STAC Items available in a STAC Catalog or Collection.
+ *
  * \since QGIS 3.40
  */
 class CORE_EXPORT QgsStacItemCollection

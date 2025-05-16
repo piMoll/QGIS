@@ -16,8 +16,7 @@
 #ifndef QGSSTACITEM_H
 #define QGSSTACITEM_H
 
-#define SIP_NO_FILE
-
+#include "qgis.h"
 #include "qgis_core.h"
 #include "qgsrange.h"
 #include "qgsstacobject.h"
@@ -28,9 +27,7 @@
 
 /**
  * \ingroup core
- * \brief Class for storing a STAC Item's data
- *
- * \note Not available in python bindings
+ * \brief Class for storing a STAC Item's data.
  *
  * \since QGIS 3.40
  */

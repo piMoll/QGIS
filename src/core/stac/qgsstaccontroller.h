@@ -16,8 +16,7 @@
 #ifndef QGSSTACCONTROLLER_H
 #define QGSSTACCONTROLLER_H
 
-#define SIP_NO_FILE
-
+#include "qgis.h"
 #include <QObject>
 #include <nlohmann/json.hpp>
 
@@ -36,11 +35,10 @@ class QNetworkReply;
 
 /**
  * \ingroup core
- * \brief The QgsStacController class handles STAC requests
+ * \brief The QgsStacController class handles STAC requests.
  *
- * Contains methods to generate STAC objects from local and remote urls
- *
- * \note not available in Python bindings
+ * Contains methods to generate STAC objects from local and remote urls.
+
  * \since QGIS 3.40
 */
 class CORE_EXPORT QgsStacController : public QObject
