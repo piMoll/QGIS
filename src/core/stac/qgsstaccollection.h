@@ -51,7 +51,7 @@ class CORE_EXPORT QgsStacCollection : public QgsStacCatalog
                        const QString &license,
                        const QgsStacExtent &extent );
 
-    QgsStacObject::Type type() const override;
+    Qgis::StacObjectType type() const override;
     QString toHtml() const override;
 
     //! Returns the list of keywords describing the Collection

@@ -47,7 +47,7 @@ class CORE_EXPORT QgsStacCatalog : public QgsStacObject
                     const QString &description,
                     const QVector< QgsStacLink > &links );
 
-    QgsStacObject::Type type() const override;
+    Qgis::StacObjectType type() const override;
     QString toHtml() const override;
 
     //! Returns a short descriptive one-line title for the Catalog.

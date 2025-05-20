@@ -88,7 +88,7 @@ class CORE_EXPORT QgsStacParser
     QgsStacCollections *collections();
 
     //! Returns the type of the parsed object
-    QgsStacObject::Type type() const;
+    Qgis::StacObjectType type() const;
 
     //! Returns the last parsing error
     QString error() const;
@@ -105,7 +105,7 @@ class CORE_EXPORT QgsStacParser
     static QString getString( const nlohmann::json &data );
 
     nlohmann::json mData;
-    QgsStacObject::Type mType = QgsStacObject::Type::Unknown;
+    Qgis::StacObjectType mType = Qgis::StacObjectType::Unknown;
     std::unique_ptr<QgsStacObject> mObject;
     QString mError;
     QUrl mBaseUrl;

@@ -42,7 +42,7 @@ class CORE_EXPORT QgsStacAsset
     //! Returns the URI to the asset object
     QString href() const;
 
-    //! Returns the the displayed title for clients and users.
+    //! Returns the displayed title for clients and users.
     QString title() const;
 
     /**

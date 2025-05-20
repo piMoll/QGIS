@@ -16,7 +16,6 @@
 #ifndef QGSSTACCOLLECTIONS_H
 #define QGSSTACCOLLECTIONS_H
 
-#include "qgis.h"
 #include "qgis_core.h"
 #include "qgsstaclink.h"
 

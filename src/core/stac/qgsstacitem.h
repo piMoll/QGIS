@@ -55,7 +55,7 @@ class CORE_EXPORT QgsStacItem : public QgsStacObject
                  const QMap< QString, QgsStacAsset > &assets,
                  const QgsBox3D &bbox );
 
-    QgsStacObject::Type type() const override;
+    Qgis::StacObjectType type() const override;
     QString toHtml() const override;
 
     //! Returns the full footprint of the asset represented by this item, in WGS84

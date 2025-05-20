@@ -27,10 +27,8 @@
 class QgsStacController;
 class QgsStacCollection;
 
-///@cond PRIVATE
-#define SIP_NO_FILE
 
-//! Item to display that there are additional STAC items which are not loaded
+//! Item to display that there are additional STAC items which are not loaded.
 class CORE_EXPORT QgsStacFetchMoreItem : public QgsDataItem
 {
     Q_OBJECT
@@ -42,7 +40,7 @@ class CORE_EXPORT QgsStacFetchMoreItem : public QgsDataItem
 
 };
 
-//! Item for STAC Items within a catalog or collection
+//! Item for STAC Items within a catalog or collection.
 class CORE_EXPORT QgsStacItemItem : public QgsDataItem
 {
     Q_OBJECT
@@ -73,7 +71,7 @@ class CORE_EXPORT QgsStacItemItem : public QgsDataItem
     QString mConnName;
 };
 
-//! Item for catalogs and collections
+//! Item for catalogs and collections.
 class CORE_EXPORT QgsStacCatalogItem : public QgsDataCollectionItem
 {
     Q_OBJECT
@@ -119,7 +117,7 @@ class CORE_EXPORT QgsStacCatalogItem : public QgsDataCollectionItem
     QUrl mFetchMoreUrl;
 };
 
-//! Item for STAC connections, is also a catalog itself
+//! Item for STAC connections, is also a catalog itself.
 class CORE_EXPORT QgsStacConnectionItem : public QgsStacCatalogItem
 {
     Q_OBJECT
@@ -135,7 +133,7 @@ class CORE_EXPORT QgsStacConnectionItem : public QgsStacCatalogItem
     std::unique_ptr<QgsStacController> mController;
 };
 
-//! Root item for STAC connections
+//! Root item for STAC connections.
 class CORE_EXPORT QgsStacRootItem : public QgsConnectionsRootItem
 {
     Q_OBJECT
@@ -150,7 +148,7 @@ class CORE_EXPORT QgsStacRootItem : public QgsConnectionsRootItem
     void onConnectionsChanged();
 };
 
-//! Provider for STAC root data item
+//! Provider for STAC root data item.
 class CORE_EXPORT QgsStacDataItemProvider : public QgsDataItemProvider
 {
   public:
@@ -160,6 +158,5 @@ class CORE_EXPORT QgsStacDataItemProvider : public QgsDataItemProvider
     QgsDataItem *createDataItem( const QString &path, QgsDataItem *parentItem ) override;
 };
 
-///@endcond
 
 #endif // QGSSTACDATAITEMS_H
