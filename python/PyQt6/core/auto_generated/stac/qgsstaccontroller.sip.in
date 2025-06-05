@@ -49,7 +49,6 @@ Returns a STAC Item by parsing a local file The caller takes ownership
 of the returned item
 %End
 
-    template<T> std::unique_ptr< T > fetchStacObject( const QUrl &url, QString *error = 0 );
 
     std::unique_ptr< QgsStacItemCollection > fetchItemCollection( const QUrl &url, QString *error = 0 );
 %Docstring
@@ -104,7 +103,6 @@ Cancels all pending async requests
 .. versionadded:: 3.42
 %End
 
-    template<T> std::unique_ptr< T > takeStacObject( int requestId );
 
     std::unique_ptr< QgsStacItemCollection > takeItemCollection( int requestId );
 %Docstring

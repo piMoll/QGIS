@@ -57,28 +57,36 @@ class CORE_EXPORT QgsStacParser
      * If parsing failed, NULLPTR is returned
      * The caller takes ownership of the returned catalog
      */
+#ifndef SIP_RUN
     std::unique_ptr< QgsStacCatalog > catalog();
+#else
+    QgsStacCatalog *catalog() SIP_FACTORY;
+    % MethodCode
+    sipRes = sipCpp->catalog().release();
+    % End
+#endif
+
 
     /**
      * Returns the parsed STAC Collection
      * If parsing failed, NULLPTR is returned
      * The caller takes ownership of the returned collection
      */
-    std::unique_ptr< QgsStacCollection > collection();
+    std::unique_ptr< QgsStacCollection > collection() SIP_SKIP;
 
     /**
      * Returns the parsed STAC Item
      * If parsing failed, NULLPTR is returned
      * The caller takes ownership of the returned item
      */
-    std::unique_ptr< QgsStacItem > item();
+    std::unique_ptr< QgsStacItem > item() SIP_SKIP;
 
     /**
      * Returns the parsed STAC API Item Collection
      * If parsing failed, NULLPTR is returned
      * The caller takes ownership of the returned item collection
      */
-    std::unique_ptr< QgsStacItemCollection > itemCollection();
+    std::unique_ptr< QgsStacItemCollection > itemCollection() SIP_SKIP;
 
     /**
      * Returns the parsed STAC API Collections

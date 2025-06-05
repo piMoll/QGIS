@@ -55,10 +55,11 @@ Item for STAC Items within a catalog or collection.
     void updateToolTip();
     QgsStacController *stacController();
 
-    void setStacItem( std::unique_ptr< QgsStacItem > item );
-%Docstring
-takes ownership
+    void setStacItem( QgsStacItem *item /Transfer/ );
+%MethodCode
+    sipCpp-> setStacItem( std::make_unique< QgsStacItem >( a0 ) );
 %End
+
 
     QgsStacItem *stacItem() const;
 %Docstring

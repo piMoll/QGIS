@@ -40,29 +40,18 @@ Sets the base ``url`` that will be used to resolve relative links. If
 not called, relative links will not be resolved to absolute links.
 %End
 
-    std::unique_ptr< QgsStacCatalog > catalog();
+    QgsStacCatalog *catalog() /Factory/;
 %Docstring
 Returns the parsed STAC Catalog If parsing failed, ``None`` is returned
 The caller takes ownership of the returned catalog
 %End
-
-    std::unique_ptr< QgsStacCollection > collection();
-%Docstring
-Returns the parsed STAC Collection If parsing failed, ``None`` is
-returned The caller takes ownership of the returned collection
+%MethodCode
+    sipRes = sipCpp->catalog().release();
 %End
 
-    std::unique_ptr< QgsStacItem > item();
-%Docstring
-Returns the parsed STAC Item If parsing failed, ``None`` is returned The
-caller takes ownership of the returned item
-%End
 
-    std::unique_ptr< QgsStacItemCollection > itemCollection();
-%Docstring
-Returns the parsed STAC API Item Collection If parsing failed, ``None``
-is returned The caller takes ownership of the returned item collection
-%End
+
+
 
     QgsStacCollections *collections();
 %Docstring

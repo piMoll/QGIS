@@ -56,8 +56,16 @@ class CORE_EXPORT QgsStacItemItem : public QgsDataItem
     void updateToolTip();
     QgsStacController *stacController();
 
+#ifndef SIP_RUN
     //! takes ownership
     void setStacItem( std::unique_ptr< QgsStacItem > item );
+#else
+    void setStacItem( QgsStacItem *item SIP_TRANSFER );
+    % MethodCode
+    sipCpp-> setStacItem( std::make_unique< QgsStacItem >( a0 ) );
+    % End
+#endif
+
 
     //! does not transfer ownership
     QgsStacItem *stacItem() const;

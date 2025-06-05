@@ -74,7 +74,7 @@ class CORE_EXPORT QgsStacController : public QObject
      * An optional \a error parameter will be populated with any network error information.
      * The caller takes ownership of the returned object
      */
-    template<class T> std::unique_ptr< T > fetchStacObject( const QUrl &url, QString *error = nullptr );
+    template<class T> std::unique_ptr< T > fetchStacObject( const QUrl &url, QString *error = nullptr ) SIP_SKIP;
 
     /**
      * Fetches a feature collection from \a url using a blocking network request.
@@ -129,7 +129,7 @@ class CORE_EXPORT QgsStacController : public QObject
      * \see fetchStacObjectAsync
      * \see finishedStacObjectRequest
      */
-    template<class T> std::unique_ptr< T > takeStacObject( int requestId );
+    template<class T> std::unique_ptr< T > takeStacObject( int requestId ) SIP_SKIP;
 
     /**
      * Returns the feature collection fetched with the specified \a requestId
